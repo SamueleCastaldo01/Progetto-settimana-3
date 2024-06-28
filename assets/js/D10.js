@@ -473,16 +473,38 @@ console.log(serchDivide)
 */
 console.log("")
 console.log("Esercizio 19----------------------")
+function removeIndex(movies, i) {
+  if(i < movies.length && i >= 0) {  //controllo dell'indice se è presente
+    movies.splice(i,1);
+    return movies
+  } else {
+    console.log('questo indice non è presente');
+    return
+  }
+}
+console.log(removeIndex(movies,13))
+
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+console.log("")
+console.log("Esercizio 20----------------------")
+function ElContainer() {
+  let cont = document.getElementById('container')
+  return cont
+}
+let container = ElContainer();
+console.log(container);
+
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+console.log("")
+console.log("Esercizio 21----------------------")
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
