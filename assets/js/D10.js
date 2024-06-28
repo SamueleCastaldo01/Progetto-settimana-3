@@ -1,4 +1,118 @@
+const movies = [
+  {
+    Title: 'The Lord of the Rings: The Fellowship of the Ring',
+    Year: '2001',
+    imdbID: 'tt0120737',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
+  },
 
+  {
+    Title: 'The Lord of the Rings: The Return of the King',
+    Year: '2003',
+    imdbID: 'tt0167260',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+  },
+  {
+    Title: 'The Lord of the Rings: The Two Towers',
+    Year: '2002',
+    imdbID: 'tt0167261',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Lord of War',
+    Year: '2005',
+    imdbID: 'tt0399295',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Lords of Dogtown',
+    Year: '2005',
+    imdbID: 'tt0355702',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
+  },
+  {
+    Title: 'The Lord of the Rings',
+    Year: '1978',
+    imdbID: 'tt0077869',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Lord of the Flies',
+    Year: '1990',
+    imdbID: 'tt0100054',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg',
+  },
+  {
+    Title: 'The Lords of Salem',
+    Year: '2012',
+    imdbID: 'tt1731697',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
+    Year: '1984',
+    imdbID: 'tt0087365',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Lord of the Flies',
+    Year: '1963',
+    imdbID: 'tt0057261',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg',
+  },
+  {
+    Title: 'The Avengers',
+    Year: '2012',
+    imdbID: 'tt0848228',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Avengers: Infinity War',
+    Year: '2018',
+    imdbID: 'tt4154756',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Avengers: Age of Ultron',
+    Year: '2015',
+    imdbID: 'tt2395427',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
+  },
+  {
+    Title: 'Avengers: Endgame',
+    Year: '2019',
+    imdbID: 'tt4154796',
+    Type: 'movie',
+    Poster:
+      'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
+  },
+]
 /*
 REGOLE
 - Tutte le risposte devono essere scritte in JavaScript
@@ -208,6 +322,19 @@ console.log(howManyDays('2024-06-20'))
 */
 console.log("")
 console.log("Esercizio 10----------------------")
+function isTodayMyBirthday(compleanno) {
+  const oggi = new Date();
+  
+  const oggiGiorno = oggi.getDate();
+  const oggiMese = oggi.getMonth() + 1;
+  
+  const compleannoData = new Date(compleanno);
+  const compleannoGiorno = compleannoData.getDate();
+  const compleannoMese = compleannoData.getMonth() + 1; 
+  
+  return (oggiGiorno === compleannoGiorno) && (oggiMese === compleannoMese);
+}
+console.log(isTodayMyBirthday('2024-06-28'))
 
 // Arrays & Oggetti
 
@@ -217,18 +344,51 @@ console.log("Esercizio 10----------------------")
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+console.log("")
+console.log("Esercizio 11----------------------")
+function deleteProp(movies, s) {
+  movies.forEach(element => {
+    delete element[s]
+  })
+  
+  return movies; // Ritorna l'oggetto movies modificato
+}
+console.log(deleteProp(movies, 'Poster'));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+console.log("")
+console.log("Esercizio 12----------------------")
+function newestMovie(movies) {
+  let max = 0
+  let maxObjecct = null
+  movies.forEach(el => {
+    if(max < parseFloat(el.Year)) {
+      max = parseFloat(el.Year)
+      maxObjecct = el
+    }
+  })
+  return maxObjecct
+}
+let maxObjecct = newestMovie(movies)
+console.log(maxObjecct)
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
 */
+console.log("")
+console.log("Esercizio 13----------------------")
+function countMovies(movies) {
+ return movies.length
+}
+console.log(countMovies(movies))
 
 /* ESERCIZIO 14
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
+console.log("")
+console.log("Esercizio 14----------------------")
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
@@ -313,118 +473,4 @@ console.log("Esercizio 10----------------------")
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
-const movies = [
-  {
-    Title: 'The Lord of the Rings: The Fellowship of the Ring',
-    Year: '2001',
-    imdbID: 'tt0120737',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg',
-  },
 
-  {
-    Title: 'The Lord of the Rings: The Return of the King',
-    Year: '2003',
-    imdbID: 'tt0167260',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lord of the Rings: The Two Towers',
-    Year: '2002',
-    imdbID: 'tt0167261',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNGE5MzIyNTAtNWFlMC00NDA2LWJiMjItMjc4Yjg1OWM5NzhhXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of War',
-    Year: '2005',
-    imdbID: 'tt0399295',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTYzZWE3MDAtZjZkMi00MzhlLTlhZDUtNmI2Zjg3OWVlZWI0XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lords of Dogtown',
-    Year: '2005',
-    imdbID: 'tt0355702',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDBhNGJlOTAtM2ExNi00NmEzLWFmZTQtYTZhYTRlNjJjODhmXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lord of the Rings',
-    Year: '1978',
-    imdbID: 'tt0077869',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGMyNWJhZmYtNGQxYi00Y2ZjLWJmNjktNTgzZWJjOTg4YjM3L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of the Flies',
-    Year: '1990',
-    imdbID: 'tt0100054',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOTI2NTQyODk0M15BMl5BanBnXkFtZTcwNTQ3NDk0NA@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Lords of Salem',
-    Year: '2012',
-    imdbID: 'tt1731697',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjA2NTc5Njc4MV5BMl5BanBnXkFtZTcwNTYzMTcwOQ@@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Greystoke: The Legend of Tarzan, Lord of the Apes',
-    Year: '1984',
-    imdbID: 'tt0087365',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM5MzcwOTg4MF5BMl5BanBnXkFtZTgwOTQwMzQxMDE@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Lord of the Flies',
-    Year: '1963',
-    imdbID: 'tt0057261',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BOGEwYTlhMTgtODBlNC00ZjgzLTk1ZmEtNmNkMTEwYTZiM2Y0XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg',
-  },
-  {
-    Title: 'The Avengers',
-    Year: '2012',
-    imdbID: 'tt0848228',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Infinity War',
-    Year: '2018',
-    imdbID: 'tt4154756',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Age of Ultron',
-    Year: '2015',
-    imdbID: 'tt2395427',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_SX300.jpg',
-  },
-  {
-    Title: 'Avengers: Endgame',
-    Year: '2019',
-    imdbID: 'tt4154796',
-    Type: 'movie',
-    Poster:
-      'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg',
-  },
-]
