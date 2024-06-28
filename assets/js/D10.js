@@ -206,7 +206,7 @@ function whoIsBigger(n1, n2){
     return n2;
   }
 }
-console.log(whoIsBigger(2,3))
+console.log(whoIsBigger(15,3))
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -408,7 +408,7 @@ console.log("Esercizio 15----------------------")
 function onlyInLastMillennium(movies) {
   let ar = []
     movies.forEach(el => {
-      if(parseFloat(el.Year) < 2000) {    //in teoria non ce bisogno del pareseFloat
+      if(parseFloat(el.Year) < 2000) {    //in teoria non ce bisogno del parseFloat
         ar.push(el)
       }
     })
