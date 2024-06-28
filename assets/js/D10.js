@@ -324,7 +324,6 @@ console.log("")
 console.log("Esercizio 10----------------------")
 function isTodayMyBirthday(compleanno) {
   const oggi = new Date();
-  
   const oggiGiorno = oggi.getDate();
   const oggiMese = oggi.getMonth() + 1;
   
