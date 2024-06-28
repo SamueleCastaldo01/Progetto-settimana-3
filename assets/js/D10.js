@@ -73,35 +73,84 @@ console.log(me)
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+console.log("")
+console.log("Esercizio 1----------------------")
+function dice() {
+  return Math.floor(Math.random() * 6) + 1;
+}
+console.log(dice())
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log("")
+console.log("Esercizio 2----------------------")
+function whoIsBigger(n1, n2){
+  if(n1>n2) {
+    return n1;
+  } else {
+    return n2;
+  }
+}
+console.log(whoIsBigger(2,3))
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
 
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
+console.log("")
+console.log("Esercizio 3----------------------")
+function splitMe(stringa) {
+  return stringa.split(/\s+/);
+}
+console.log(splitMe("Questa è una frase da parte di Epicode"))
+
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log("")
+console.log("Esercizio 4----------------------")
+function deleteOne(s1, flag) {
+  if (flag) {
+    return s1.slice(1);
+  } else {
+    return s1.slice(0, -1);
+  }
+}
+console.log(deleteOne("Epicode", false))
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+console.log("")
+console.log("Esercizio 5----------------------")
+function onlyLetters(s1) {
+  return s1.replace(/\d/g, '');   //d indica una cifra numerica, g per fare la sostituzione con  ''
+}
+console.log(onlyLetters("I have 4 dogs"))
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
+console.log("")
+console.log("Esercizio 6----------------------")
+function isThisAnEmail(stringa) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(stringa);      //qui riporta se è vero o falso
+}
+console.log(isThisAnEmail("email@example.com"));
+console.log(isThisAnEmail("emailexample.com")); 
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+console.log("")
+console.log("Esercizio 7----------------------")
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
