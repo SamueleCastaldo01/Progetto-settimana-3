@@ -143,14 +143,21 @@ function isThisAnEmail(stringa) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(stringa);      //qui riporta se è vero o falso
 }
-console.log(isThisAnEmail("email@example.com"));
-console.log(isThisAnEmail("emailexample.com")); 
+console.log(isThisAnEmail("email@example.com"))
+console.log(isThisAnEmail("emailexample.com"))
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 console.log("")
 console.log("Esercizio 7----------------------")
+function whatDayIsIt() {
+  const giorniDellaSettimana = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+  const oggi = new Date();
+  const indiceGiorno = oggi.getDay()
+  return giorniDellaSettimana[indiceGiorno]
+}
+console.log(whatDayIsIt())
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -164,14 +171,43 @@ console.log("Esercizio 7----------------------")
       values: [3, 3, 4]
   }
 */
+console.log("")
+console.log("Esercizio 8----------------------")
+function rollTheDices(n) {
+  const oggetto = { sum: 0, values: [] };
+
+  for (let i = 0; i < n; i++) {
+    let numeroCasuale = dice();
+    oggetto.sum += numeroCasuale;
+    oggetto.values.push(numeroCasuale);
+  }
+  
+  return oggetto;
+}
+
+console.log(rollTheDices(4));
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
+console.log("")
+console.log("Esercizio 9----------------------")
+function howManyDays(data) {
+  const startDate = new Date(data);
+  const oggi = new Date();
+  
+  const differenzaMs = oggi - startDate;
+  const giorniTrascorsi = Math.floor(differenzaMs / (1000 * 60 * 60 * 24));
+  
+  return giorniTrascorsi;
+}
+console.log(howManyDays('2024-06-20'))
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+console.log("")
+console.log("Esercizio 10----------------------")
 
 // Arrays & Oggetti
 
