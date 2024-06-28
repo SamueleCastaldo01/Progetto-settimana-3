@@ -389,14 +389,39 @@ console.log(countMovies(movies))
 */
 console.log("")
 console.log("Esercizio 14----------------------")
+function onlyTheYears(movies) {
+  let ar = []
+  movies.forEach(el => {
+    ar.push(el.Year)
+  })
+  return ar
+}
+let onlyYears = onlyTheYears(movies)
+console.log(onlyYears)
+
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
+console.log("")
+console.log("Esercizio 15----------------------")
+function onlyInLastMillennium(movies) {
+  let ar = []
+    movies.forEach(el => {
+      if(el.Year < 2000) {
+        ar.push(el)
+      }
+    })
+    return ar
+}
+const onlMillennium = onlyInLastMillennium(movies)
+console.log(onlMillennium)
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+console.log("")
+console.log("Esercizio 15----------------------")
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
