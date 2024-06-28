@@ -334,7 +334,7 @@ function isTodayMyBirthday(compleanno) {
   
   return (oggiGiorno === compleannoGiorno) && (oggiMese === compleannoMese);
 }
-console.log(isTodayMyBirthday('2024-06-28'))
+console.log(isTodayMyBirthday('06-28'))
 
 // Arrays & Oggetti
 
