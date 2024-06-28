@@ -505,26 +505,97 @@ console.log(container);
 */
 console.log("")
 console.log("Esercizio 21----------------------")
+function selectAllTDs() {
+  let tds = document.querySelectorAll('td');
+
+  return tds;
+}
+
+let tdElements = selectAllTDs();
+console.log("Numero di <td> trovati:", tdElements.length);
+
+tdElements.forEach(td => {
+  console.log(td.textContent);
+});
+
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+console.log("")
+console.log("Esercizio 22----------------------")
+function printTds() {
+  let tds = document.querySelectorAll('td')
+
+  tds.forEach(td => {
+    console.log(td.textContent)
+  })
+}
+
+printTds();
+
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+console.log("")
+console.log("Esercizio 23----------------------")
+function aBackRed() {
+  let aRed = document.querySelectorAll('a');
+
+  aRed.forEach(el => {
+    el.style.backgroundColor = 'red'
+  })
+}
+aBackRed()
+
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+console.log("")
+console.log("Esercizio 24----------------------")
+function aggiungiLista(text) {
+  let newItem = document.createElement('li')
+
+    newItem.textContent = text
+
+  let myList = document.getElementById('myList')
+  myList.appendChild(newItem)
+}
+
+aggiungiLista('Nuovo elemento 4');
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+console.log("")
+console.log("Esercizio 25----------------------")
+function SvuotaLista() {
+  let myList = document.getElementById('myList');
+
+  while (myList.firstChild) {
+    myList.removeChild(myList.firstChild);
+  }
+}
+
+SvuotaLista();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+console.log("")
+console.log("Esercizio 26----------------------")
+function addClassTr() {
+
+  let righe = document.querySelectorAll('tr');
+  
+  righe.forEach(row => {
+    row.classList.add('test');
+  });
+}
+
+addClassTr();
 
 // [EXTRA] JS Avanzato
 
@@ -537,8 +608,20 @@ console.log("Esercizio 21----------------------")
   *
   **
   ***
-
 */
+console.log("")
+console.log("Esercizio 27----------------------")
+function halfTree(n) {
+  for(let i = 1; i <= n; i++) {
+    let line = '';
+    for(let j = 0; j < i; j++) {
+      line += '*';
+    }
+    console.log(line);
+  }
+}
+
+halfTree(4);
 
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
@@ -552,10 +635,41 @@ console.log("Esercizio 21----------------------")
 
 */
 
+console.log("")
+console.log("Esercizio 28----------------------")
+function tree(n) {
+  for (let i = 0; i < n; i++) {
+    let line = '';
+
+    for (let j = 0; j < n - i - 1; j++) { //questa serve per gli spazi
+      line += ' ';
+    }
+
+    for (let k = 0; k < 2 * i + 1; k++) { //questa aggiunge *
+      line += '*';
+    }
+
+    console.log(line);
+  }
+}
+
+tree(5);
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log("")
+console.log("Esercizio 29----------------------")
+function isItPrime(n) {
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+  for(let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false; 
+    }
+  }
+
+  return true;
+}
+console.log(isItPrime(5))
 
 
