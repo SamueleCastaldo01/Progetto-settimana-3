@@ -634,7 +634,6 @@ halfTree(4);
   *****
 
 */
-
 console.log("")
 console.log("Esercizio 28----------------------")
 function tree(n) {
@@ -670,6 +669,6 @@ function isItPrime(n) {
 
   return true;
 }
-console.log(isItPrime(5))
+console.log(isItPrime(151))
 
 
