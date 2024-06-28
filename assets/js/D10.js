@@ -408,7 +408,7 @@ console.log("Esercizio 15----------------------")
 function onlyInLastMillennium(movies) {
   let ar = []
     movies.forEach(el => {
-      if(el.Year < 2000) {
+      if(parseFloat(el.Year) < 2000) {    //in teoria non ce bisogno del pareseFloat
         ar.push(el)
       }
     })
@@ -421,20 +421,58 @@ console.log(onlMillennium)
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 console.log("")
-console.log("Esercizio 15----------------------")
+console.log("Esercizio 16----------------------")
+function sumAllTheYears(movies) {
+  let sum = 0;
+  movies.forEach(el => {
+    sum += parseFloat(el.Year)
+  })
+  return sum
+}
+console.log(sumAllTheYears(movies))
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+console.log("")
+console.log("Esercizio 17----------------------")
+function searchByTitle(movies, s) {
+  let ar = []
+  movies.forEach(el => {
+    if(el.Title.includes(s)) {
+      ar.push(el)
+    }
+  })
+  return ar
+}
+let serchTitle = searchByTitle(movies, 'Lord')
+console.log(serchTitle)
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+console.log("")
+console.log("Esercizio 18----------------------")
+function searchAndDivide(movies, s) {
+  let ar = {match: [], unmatch: []}
+  movies.forEach(el => {
+    if(el.Title.includes(s)) {
+      ar.match.push(el)
+    } else {
+      ar.unmatch.push(el)
+    }
+  })
+  return ar
+}
+let serchDivide = searchAndDivide(movies, 'Lord')
+console.log(serchDivide)
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+console.log("")
+console.log("Esercizio 19----------------------")
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
